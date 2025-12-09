@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinica Veterinaria Legnone</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    /* Sezioni */
+    .section {
+      padding: 4rem 0;
+      /*background-color: #fff;*/
+      background-color: #f0f8ff;;
+    }
+    .section:nth-of-type(even) {
+      /*background-color: #e8f0ff;*/
+      background-color: #fff;
+    }
+    .servizi-list.migliorata {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .servizio-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #e3e3e3;
+    }
+
+    .servizio-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(56, 125, 254, 0.15);
+    }
+
+    .icon-servizio {
+      font-size: 2.5rem;
+      color: #387dfe;
+      margin-bottom: 1rem;
+    }
+
+    .servizio-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+      color: #2b3a42;
+    }
+
+    .servizio-card p {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #387dfe;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .clinica-box {
+      padding: 3rem 1.5rem;
+      border-radius: 12px;
+
+    }
+
+    .clinica-container {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      align-items: center;
+      max-width: 1500px;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    .clinica-img {
+      flex: 1;
+    }
+
+    .clinica-img img {
+      width: 100%;
+      max-width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .clinica-text {
+      flex: 1;
+    }
+
+    .clinica-text h2 {
+      font-size: 2rem;
+      color: #387dfe;
+      margin-bottom: 1rem;
+    }
+
+    .clinica-text p {
+      font-size: 1.1rem;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Responsive per schermi piccoli */
+    @media (max-width: 768px) {
+      .clinica-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .clinica-img,
+      .clinica-text {
+        width: 100%;
+      }
+
+      .clinica-text h2 {
+        text-align: center;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+    <a href="index.html" class="colored-text logo-text">
+		<img src="img/logo.jpeg" alt="Logo Clinica Legnone">
+		<span>Clinica Legnone</span>
+	</a>
+
+      <nav class="main-nav">
+        <ul>
+          <li class="colored-text menu-text" ><a href="index.html">Home</a></li>
+          <li class="colored-text menu-text"><a href="services.html">Servizi</a></li>
+          <li class="colored-text menu-text"><a href="equipe.html">Equipe Veterinaria</a></li>
+          <li class="colored-text menu-text"><a href="contacts.html">Contatti</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section clinica-box">
+  	        <h2>Clinica Veterinaria Legnone</h2>
+    <div class="clinica-container">
+      <div class="clinica-img">
+        <img src="img/clinica/clinica-grande.jpg" alt="Clinica Veterinaria Legnone">
+      </div>
+      <div class="clinica-text">
+        <p>
+          La Clinica Veterinaria Legnone nasce come riferimento per residenti e turisti in una posizione strategica e facile da raggiungere, a cavallo delle provincie di Sondrio, Lecco e Como.<br>
+
+          Nuova Olonio, frazione di Dubino (So) sorge lungo la statale 36 dello Spluga ma è anche vicina alla statale 38 dello Stelvio, alla statale 340 Regina per Como e alla sp 4 Valeriana occidentale.<br>
+
+          Un ampio parcheggio gratuito e una struttura nuova e moderna accolgono i nostri clienti ed i loro animali.<br>
+
+          La Clinica, sviluppata su una superficie di 120 mq, dispone di due sale visita, una sala chirurgica, una sala radiologica, due locali adibiti alle degenze (una per gatti e una per cani), ed un laboratorio analisi attrezzato con strumentazione tecnica e diagnostica all'avanguardia.<br>
+
+          <strong>Uniamo cortesia e professionalità alla nostra passione per offrire la migliore assistenza ai nostri pazienti ed ai loro proprietari.</strong><br>
+
+          Ricordiamo ai gentili clienti che è gradito prendere appuntamento per una gestione più ottimale di tutte le esigenze.<br>
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section id="servizi" class="section services">
+    <div class="container">
+      <h1 class="section-title">I nostri servizi</h1>
+      <div class="servizi-list migliorata">
+        <div class="servizio-card">
+          <i class="fas fa-ambulance icon-servizio"></i>
+          <h3>Medicina d’urgenza</h3>
+          <p>Assistenza continuativa per casi urgenti 24h.</p>
+        </div>
+
+        <div class="servizio-card">
+          <i class="fas fa-hospital icon-servizio"></i>
+          <h3>Chirurgia & Laparoscopia</h3>
+          <p>Chirurgie per tessuti duri e molli, tecniche moderne.</p>
+        </div>
+
+        <div class="servizio-card">
+          <i class="fas fa-microscope icon-servizio"></i>
+          <h3>Diagnostica & Laboratori</h3>
+          <p>Esami digitali, ecografie, endoscopie, analisi di laboratorio.</p>
+        </div>
+
+        <div class="servizio-card">
+          <i class="fas fa-user-md icon-servizio"></i>
+          <h3>Visite specialistiche</h3>
+          <p>Cardiologia, esotici, oculistica, ortopedia, comportamentali, nutrizionali.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section team-slider-section">
+    <div class="container">
+      <h1>Equipe veterinaria</h1>
+      <div class="team-slider-wrapper">
+        <div class="team-slider" id="autoSlider">
+          <div class="team-card">
+            <img src="img/equipe/simone.jpg" alt="Dr. Simone Da Col">
+            <div class="team-card-content">
+              <h4>Dr. Simone Da Col</h4>
+              <p class="role">Direttore sanitario • Chirurgia e Medicina interna</p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <img src="img/equipe/gloria.jpg" alt="Dr.ssa Gloria Andreoli">
+            <div class="team-card-content">
+              <h4>Dr.ssa Gloria Andreoli</h4>
+              <p class="role">Medicina interna • Comportamento animale</p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <img src="img/equipe/nicola.jpg" alt="Dr. Nicola Bettiga">
+            <div class="team-card-content">
+              <h4>Dr. Nicola Bettiga</h4>
+              <p class="role">Medicina d'urgenza • Medicina interna</p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <img src="img/equipe/monica.jpg" alt="Dr.ssa Monica Cinti">
+            <div class="team-card-content">
+              <h4>Dr.ssa Monica Cinti</h4>
+              <p class="role">Consulenze specialistiche di cardiologia e di ecografia</p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <img src="img/equipe/stefano.jpg" alt="Dr. Stefano Rizzi">
+            <div class="team-card-content">
+              <h4>Dr. Stefano Rizzi</h4>
+              <p class="role">Medicina degli animali esotici</p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <img src="img/equipe/valentina.jpg" alt="Dr.ssa Valentina Venutra">
+            <div class="team-card-content">
+              <h4>Dr.ssa Valentina Venutra</h4>
+              <p class="role">Medicina interna • Medicina generale</p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <img src="img/equipe/marta.jpg" alt="Dr.ssa Marta Zanoli">
+            <div class="team-card-content">
+              <h4>Dr.ssa Marta Zanoli</h4>
+              <p class="role">Medicina di laboratorio, degenza e front office</p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <img src="img/equipe/riccardo.jpg" alt="Dott. Riccardo Barcucci">
+            <div class="team-card-content">
+              <h4>Dott. Riccardo Barcucci</h4>
+              <p class="role">Medicina di laboratorio, degenza e front office</p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <img src="img/equipe/luigi.jpg" alt="Dott. Luigi Taccani">
+            <div class="team-card-content">
+              <h4>Dott. Luigi Taccani</h4>
+              <p class="role">Medicina di laboratorio, degenza e front office</p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <img src="img/equipe/chiara.jpg" alt="Dr.ssa Chiara Matteri">
+            <div class="team-card-content">
+              <h4>Dr.ssa Chiara Matteri</h4>
+              <p class="role">Medicina di laboratorio, degenza e front office</p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <img src="img/equipe/irene.jpg" alt="Dr.ssa Irene Bonfanti">
+            <div class="team-card-content">
+              <h4>Dr.ssa Irene Bonfanti</h4>
+              <p class="role">Medicina di laboratorio, degenza e front office</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="contatti" class="section contatti">
+    <div class="container">
+      <h1>Contatti</h1>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p><strong>📍 Indirizzo:</strong> Via Prati Rossi 7/d <br> 23015 Nuova Olonio (Dubino, SO)</p>
+          <p><strong>📞 Telefono:</strong> <a href="tel:+393356173962">+39 335 6173962</a></p>
+          <p><strong>✉️ Email:</strong> <a href="mailto:info@clinicaveterinarialegnone.it">info@clinicaveterinarialegnone.it</a></p>
+          <p><strong>🕒Orari di apertura:</strong><br>
+            Lunedì: 09:30–11:30 / 16:00–18:30<br>
+            Martedì: 09:30–11:30 / 16:00–18:30<br>
+            Mercoledì: 09:30–11:30 / 16:00–18:30<br>
+            Giovedì: chiuso mattina / 16:00–18:30<br>
+            Venerdì: 09:30–11:30 / 16:00–18:30<br>
+            Sabato: 09:30–11:30 (pomeriggio chiuso)
+          </p>
+          <p>📸 Rimani aggiornato seguendoci su <strong><a href="https://www.instagram.com/clinica_veterinaria_legnone/">Instagram</a></strong></p>
+        </div>
+        <div class="map-embed">
+          <!--Google Maps iframe -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111358.29448646089!2d9.364904857514372!3d46.18985091185126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47846c885929ea0d%3A0xdb0ba2bb7031f215!2sClinica%20Veterinaria%20Legnone!5e0!3m2!1sit!2sit!4v1760364993967!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Clinica Veterinaria Legnone • P. IVA 00688280148</p>
+      <p>Iscrizione albo veterinari SO n°105</p>
+      <p><a href="privacy.html">Privacy / Cookie Policy</a></p>
+    </div>
+  </footer>
+</body>
+</html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.getElementById("autoSlider");
+
+    // Duplica il contenuto per il loop
+    slider.innerHTML += slider.innerHTML;
+
+    let isPaused = false;
+    let scrollAmount = 0.5;
+
+    function autoScroll() {
+      if (!isPaused) {
+        slider.scrollLeft += scrollAmount;
+
+        // Quando arriva alla metà (fine del contenuto originale), torna all'inizio
+        if (slider.scrollLeft >= slider.scrollWidth / 2) {
+          slider.scrollLeft = 0;
+        }
+      }
+      requestAnimationFrame(autoScroll);
+    }
+
+    // Pausa su hover o touch
+    slider.addEventListener("mouseenter", () => isPaused = true);
+    slider.addEventListener("mouseleave", () => isPaused = false);
+    slider.addEventListener("touchstart", () => isPaused = true);
+    slider.addEventListener("touchend", () => isPaused = false);
+
+    autoScroll();
+  });
+
+
+document.querySelectorAll('.team-slider-section').forEach(card => {
+card.addEventListener('click', () => {
+
+    window.location.href = 'equipe.html';
+
+});
+card.style.cursor = 'pointer';
+});
+
+document.querySelectorAll('.contatti').forEach(card => {
+  card.addEventListener('click', () => {
+
+    window.location.href = 'contacts.html';
+
+  });
+  card.style.cursor = 'pointer';
+});
+
+  document.querySelectorAll('.services').forEach(card => {
+    card.addEventListener('click', () => {
+
+      window.location.href = 'services.html';
+
+    });
+    card.style.cursor = 'pointer';
+  });
+
+</script>
+

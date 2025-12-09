@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servizi | Clinica Veterinaria Legnone</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .section-title {
+            text-align: center;
+            color: #387dfe;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .servizi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 4rem;
+        }
+
+        .servizio-card {
+            background-color: #f4f8ff;
+            border-left: 5px solid #387dfe;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            line-height: 1.4;
+            transition: transform 0.2s ease;
+        }
+
+        .servizio-card:hover {
+            transform: translateY(-3px);
+            background-color: #e8f0ff;
+        }
+
+        .comportamento-box {
+            background-color: #e8f0ff; /* azzurro chiaro */
+            padding: 3rem 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-top: 3rem;
+        }
+
+        .comportamento-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #2b3a42;
+        }
+
+        .comportamento-title {
+            color: #387dfe;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .comportamento-intro {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .nota {
+            display: block;
+            font-size: 0.95rem;
+            color: #555;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        .comportamento-disturbi h3 {
+            font-size: 1.2rem;
+            color: #2b3a42;
+            margin-bottom: 0.75rem;
+        }
+
+        .comportamento-disturbi ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .comportamento-disturbi ul li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .comportamento-disturbi ul li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #387dfe;
+            font-weight: bold;
+        }
+
+
+
+
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+
+<header class="site-header">
+    <div class="container header-inner">
+		<a href="index.html" class="colored-text logo-text">
+			<img src="img/logo.jpeg" alt="Logo Clinica Legnone">
+			<span>Clinica Legnone</span>
+		</a>
+
+        <nav class="main-nav">
+            <ul>
+                <li class="colored-text menu-text"><a href="index.html">Home</a></li>
+                <li class="colored-text menu-text"><a href="services.html">Servizi</a></li>
+                <li class="colored-text menu-text"><a href="equipe.html">Equipe Veterinaria</a></li>
+                <li class="colored-text menu-text"><a href="contacts.html">Contatti</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="section servizi-section">
+    <div class="container">
+        <h1 class="section-title">Servizi</h1>
+        <div class="servizi-grid">
+            <div class="servizio-card">📞 Reperibilità telefonica continua</div>
+            <div class="servizio-card">🚑 Medicina d’urgenza</div>
+            <div class="servizio-card">🧪 Esami di laboratorio</div>
+            <div class="servizio-card">🖥️ Diagnostica digitale per immagini</div>
+            <div class="servizio-card">🏥 Degenza (anche notturna)</div>
+            <div class="servizio-card">🔪 Chirurgia</div>
+            <div class="servizio-card">🔬 Chirurgia in laparoscopia</div>
+            <div class="servizio-card">💉 Emotrasfusioni</div>
+            <div class="servizio-card">🫁 Ossigenoterapia</div>
+            <div class="servizio-card">🏡 Visite domiciliari (non urgenze)</div>
+            <div class="servizio-card">🚪 Doppio ingresso contingentato</div>
+            <div class="servizio-card">🅿️ Ampio parcheggio</div>
+        </div>
+
+        <h2 class="section-title">Prestazioni specialistiche</h2>
+        <div class="servizi-grid">
+            <div class="servizio-card">🔧 Chirurgie dei tessuti duri e molli</div>
+            <div class="servizio-card">🔬 Chirurgie laparoscopiche</div>
+            <div class="servizio-card">📸 Ecografie addominali</div>
+            <div class="servizio-card">❤️ Visite cardiologiche</div>
+            <div class="servizio-card">📹 Endoscopie</div>
+            <div class="servizio-card">🐕 Studio ufficiale per displasie</div>
+            <div class="servizio-card">🧬 Riproduzione assistita</div>
+            <div class="servizio-card">🦎 Visite animali esotici</div>
+            <div class="servizio-card">🧠 Visite neurologiche</div>
+            <div class="servizio-card">🦴 Visite ortopediche</div>
+            <div class="servizio-card">🥗 Visite nutrizionali</div>
+            <div class="servizio-card">🐾 Visite comportamentali</div>
+            <div class="servizio-card">👁️ Visite oculistiche</div>
+        </div>
+
+        <section class="section comportamento-box" style="background-color: #f0f8ff;">
+            <div class="container comportamento-wrapper">
+                <h2 class="comportamento-title">🐾 La visita comportamentale</h2>
+
+                <p class="comportamento-intro">
+                    Il tuo cane o il tuo gatto necessitano di una visita specialistica comportamentale?
+                    Contatta direttamente la <strong>Dott.ssa Gloria Andreoli</strong> per avere maggiori informazioni e accordarti sulla sede della visita
+                    <span class="nota">(le visite dei gatti si effettuano sempre a domicilio)</span>
+                    <a class="colored-text" href="tel:+393292025962">Dott.ssa Gloria Andreoli  +39 329 2025962</a>
+                </p>
+
+                <div class="comportamento-disturbi">
+                    <h3>Disturbi più comunemente trattati:</h3>
+                    <ul>
+                        <li>Aggressività</li>
+                        <li>Paure / fobie</li>
+                        <li>Ansia da separazione</li>
+                        <li>Problemi di convivenza tra gatti</li>
+                        <li>Eliminazioni inappropriate</li>
+                        <li>Inserimento nuovo animale domestico</li>
+                        <li>Visite specialistiche ufficiali per valutazione cani morsicatori</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</section>
+
+
+<section id="galleria" class="section galleria" style="background-color: #ffff;">
+    <div class="gallery-container">
+        <h1>La Clinica Veterinaria Legnone</h1>
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="img/clinica/1.png" alt="Clinica 1" />
+            </div>
+            <div class="gallery-card">
+                <img src="img/clinica/2.png" alt="Clinica 1" />
+            </div>
+            <div class="gallery-card">
+                <img src="img/clinica/3.png" alt="Clinica 1" />
+            </div>
+            <div class="gallery-card">
+                <img src="img/clinica/4.png" alt="Clinica 1" />
+            </div>
+            <div class="gallery-card">
+                <img src="img/clinica/5.png" alt="Clinica 5" />
+            </div>
+            <div class="gallery-card">
+                <img src="img/clinica/6.png" alt="Clinica 6" />
+            </div>
+            <div class="gallery-card">
+                <img src="img/clinica/7.png" alt="Clinica 7" />
+            </div>
+            <div class="gallery-card">
+                <img src="img/clinica/8.png" alt="Clinica 8" />
+            </div>
+            <div class="gallery-card">
+                <img src="img/clinica/9.png" alt="Clinica 9" />
+            </div>
+            <div class="gallery-card">
+                <img src="img/clinica/10.png" alt="Clinica 10" />
+            </div>
+            <div class="gallery-card">
+                <img src="img/clinica/11.png" alt="Clinica 11" />
+            </div>
+            <div class="gallery-card">
+                <img src="img/clinica/12.png" alt="Clinica 12" />
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section id="contatti" class="section contatti">
+    <div class="container">
+        <h1>Contatti</h1>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p><strong>📍 Indirizzo:</strong> Via Prati Rossi 7/d <br> 23015 Nuova Olonio (Dubino, SO)</p>
+                <p><strong>📞 Telefono:</strong> <a href="tel:+393356173962">+39 335 6173962</a></p>
+                <p><strong>✉️ Email:</strong> <a href="mailto:info@clinicaveterinarialegnone.it">info@clinicaveterinarialegnone.it</a></p>
+                <p><strong>🕒Orari di apertura:</strong><br>
+                    Lunedì: 09:30–11:30 / 16:00–18:30<br>
+                    Martedì: 09:30–11:30 / 16:00–18:30<br>
+                    Mercoledì: 09:30–11:30 / 16:00–18:30<br>
+                    Giovedì: chiuso mattina / 16:00–18:30<br>
+                    Venerdì: 09:30–11:30 / 16:00–18:30<br>
+                    Sabato: 09:30–11:30 (pomeriggio chiuso)
+                </p>
+                <p>📸 Rimani aggiornato seguendoci su <strong><a href="https://www.instagram.com/clinica_veterinaria_legnone/">Instagram</a></strong></p>
+            </div>
+            <div class="map-embed">
+                <!--Google Maps iframe -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111358.29448646089!2d9.364904857514372!3d46.18985091185126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47846c885929ea0d%3A0xdb0ba2bb7031f215!2sClinica%20Veterinaria%20Legnone!5e0!3m2!1sit!2sit!4v1760364993967!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2025 Clinica Veterinaria Legnone • P. IVA 00688280148</p>
+        <p>Iscrizione albo veterinari SO n°105</p>
+        <p><a href="privacy.html">Privacy / Cookie Policy</a></p>
+    </div>
+</footer>
+</body>
+</html>
+
+
