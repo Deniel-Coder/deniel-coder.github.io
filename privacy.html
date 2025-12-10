@@ -52,7 +52,7 @@
 <header class="site-header">
     <div class="container header-inner">
 		<a href="index.html" class="colored-text logo-text">
-			<img src="img/logo.jpeg" alt="Logo Clinica Legnone">
+			<img src="img/logo.png" alt="Logo Clinica Legnone">
 			<span>Clinica Legnone</span>
 		</a>
 
@@ -213,12 +213,10 @@
 
 
 
-<footer class="site-footer">
-    <div class="container">
-        <p>© 2025 Clinica Veterinaria Legnone • P. IVA 00688280148</p>
-        <p>Iscrizione albo veterinari SO n°105</p>
-        <p><a href="privacy.html">Privacy / Cookie Policy</a></p>
-    </div>
-</footer>
+<div id="footer-placeholder"></div>
+<script>
+  fetch("footer.html").then(response => response.text())
+.then(data => document.getElementById("footer-placeholder").innerHTML = data);
+</script>
 </body>
 </html>
