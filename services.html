@@ -266,12 +266,11 @@
         </div>
     </div>
 </section>
-<footer class="site-footer">
-    <div class="container">
-        <p>© 2025 CLINICA VETERINARIA LEGNONE SRL • P.IVA 12168440969</p>
-        <p><a href="privacy.html">Privacy / Cookie Policy</a></p>
-    </div>
-</footer>
+<div id="footer-placeholder"></div>
+<script>
+  fetch("footer.html").then(response => response.text())
+.then(data => document.getElementById("footer-placeholder").innerHTML = data);
+</script>
 </body>
 </html>
 
