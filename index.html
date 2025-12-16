@@ -212,11 +212,12 @@
       <h1>Equipe veterinaria</h1>
       <div class="team-slider-wrapper">
         <div class="team-slider" id="autoSlider">
+		
           <div class="team-card">
             <img src="img/equipe/simone.jpg" alt="Dr. Simone Da Col">
             <div class="team-card-content">
               <h4>Dr. Simone Da Col</h4>
-              <p class="role">Direttore sanitario • Chirurgia e Medicina interna</p>
+              <p class="role">Direttore sanitario • Chirurgia</p>
             </div>
           </div>
 
@@ -224,7 +225,7 @@
             <img src="img/equipe/gloria.jpg" alt="Dr.ssa Gloria Andreoli">
             <div class="team-card-content">
               <h4>Dr.ssa Gloria Andreoli</h4>
-              <p class="role">Medicina interna • Comportamento animale</p>
+              <p class="role">Medicina Comportamentale • Ecografia</p>
             </div>
           </div>
 
@@ -248,7 +249,7 @@
             <img src="img/equipe/stefano.jpg" alt="Dr. Stefano Rizzi">
             <div class="team-card-content">
               <h4>Dr. Stefano Rizzi</h4>
-              <p class="role">Medicina degli animali esotici</p>
+              <p class="role">Medicina degli animali esotici • Chirurgia</p>
             </div>
           </div>
 
@@ -260,19 +261,12 @@
             </div>
           </div>
 
-          <div class="team-card">
-            <img src="img/equipe/marta.jpg" alt="Dr.ssa Marta Zanoli">
-            <div class="team-card-content">
-              <h4>Dr.ssa Marta Zanoli</h4>
-              <p class="role">Medicina di laboratorio, degenza e front office</p>
-            </div>
-          </div>
 
           <div class="team-card">
             <img src="img/equipe/riccardo.jpg" alt="Dott. Riccardo Barcucci">
             <div class="team-card-content">
               <h4>Dott. Riccardo Barcucci</h4>
-              <p class="role">Medicina di laboratorio, degenza e front office</p>
+              <p class="role">Ortopedia</p>
             </div>
           </div>
 
@@ -280,15 +274,7 @@
             <img src="img/equipe/luigi.jpg" alt="Dott. Luigi Taccani">
             <div class="team-card-content">
               <h4>Dott. Luigi Taccani</h4>
-              <p class="role">Medicina di laboratorio, degenza e front office</p>
-            </div>
-          </div>
-
-          <div class="team-card">
-            <img src="img/equipe/chiara.jpg" alt="Dr.ssa Chiara Matteri">
-            <div class="team-card-content">
-              <h4>Dr.ssa Chiara Matteri</h4>
-              <p class="role">Medicina di laboratorio, degenza e front office</p>
+              <p class="role">Oculistica</p>
             </div>
           </div>
 
@@ -296,9 +282,35 @@
             <img src="img/equipe/irene.jpg" alt="Dr.ssa Irene Bonfanti">
             <div class="team-card-content">
               <h4>Dr.ssa Irene Bonfanti</h4>
-              <p class="role">Medicina di laboratorio, degenza e front office</p>
+              <p class="role">Ortopedia</p>
             </div>
           </div>
+
+          <div class="team-card">
+            <img src="img/equipe/adelaide_delloca.jpeg" alt="Giulia Castaldelli">
+            <div class="team-card-content">
+              <h4>Giulia Castaldelli</h4>
+              <p class="role">Medicina interna</p>
+            </div>
+          </div>
+		  
+		<div class="team-card">
+				<img src="img/equipe/lorenzo_arietti.jpeg" alt="Dott. Lorenzo Arietti">
+				<div class="team-card-content">
+				  <h4>Dott. Lorenzo Arietti</h4>
+				  <p class="role">Medicina generale • Pronto soccorso</p>
+				</div>
+			</div>
+			
+		<div class="team-card">
+				<img src="img/equipe/adelaide_delloca.jpeg" alt="Adelaide Dell'Oca">
+				<div class="team-card-content">
+				  <h4>Adelaide Dell'Oca</h4>
+				  <p class="role">Assistente</p>
+				</div>
+			</div>
+		  
+		  
 
         </div>
       </div>
@@ -320,57 +332,17 @@
   fetch("sections/contacts_section.html").then(response => response.text())
 .then(data => document.getElementById("contacts-placeholder").innerHTML = data);
 
+	document.querySelectorAll('.team-card').forEach(card => {
+	card.addEventListener('click', () => {
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const slider = document.getElementById("autoSlider");
+		window.location.href = 'equipe.html';
 
-    // Duplica il contenuto per il loop
-    slider.innerHTML += slider.innerHTML;
-
-    let isPaused = false;
-    let scrollAmount = 0.5;
-
-    function autoScroll() {
-      if (!isPaused) {
-        slider.scrollLeft += scrollAmount;
-
-        // Quando arriva alla metà (fine del contenuto originale), torna all'inizio
-        if (slider.scrollLeft >= slider.scrollWidth / 2) {
-          slider.scrollLeft = 0;
-        }
-      }
-      requestAnimationFrame(autoScroll);
-    }
-
-    // Pausa su hover o touch
-    slider.addEventListener("mouseenter", () => isPaused = true);
-    slider.addEventListener("mouseleave", () => isPaused = false);
-    slider.addEventListener("touchstart", () => isPaused = true);
-    slider.addEventListener("touchend", () => isPaused = false);
-
-    autoScroll();
-  });
+	});
+	card.style.cursor = 'pointer';
+	});
 
 
-document.querySelectorAll('.team-slider-section').forEach(card => {
-card.addEventListener('click', () => {
-
-    window.location.href = 'equipe.html';
-
-});
-card.style.cursor = 'pointer';
-});
-
-document.querySelectorAll('.contatti').forEach(card => {
-  card.addEventListener('click', () => {
-
-    window.location.href = 'contacts.html';
-
-  });
-  card.style.cursor = 'pointer';
-});
-
-  document.querySelectorAll('.services').forEach(card => {
+  document.querySelectorAll('.servizi-list').forEach(card => {
     card.addEventListener('click', () => {
 
       window.location.href = 'services.html';
