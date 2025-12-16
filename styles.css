@@ -59,6 +59,8 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 0;
+
+
 }
 
 @media (max-width: 600px) {
@@ -310,7 +312,9 @@ a:hover {
 .team-grid {
   display: grid;
   margin-top: 50px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
+  justify-items: left;
+  justify-content: center;
   gap: 30px;
 }
 
@@ -321,6 +325,7 @@ a:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   text-align: center;
+max-width: 320px;
 }
 
 .team-card img {
@@ -377,12 +382,26 @@ a:hover {
   width: 100%;
 }
 
+.team-slider-wrapper:hover .team-slider-track {
+  animation-play-state: paused;
+}
+
 .team-slider {
-  display: flex;
   flex-wrap: nowrap;
   overflow-x: hidden; /* nasconde la scrollbar */
-  scroll-behavior: auto; /* nessuna animazione, gestita da JS */
-  gap: 20px;
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: scroll-team 40s linear infinite;
+}
+
+@keyframes scroll-team {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .team-slider::-webkit-scrollbar {
